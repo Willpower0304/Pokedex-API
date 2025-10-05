@@ -1,9 +1,11 @@
 const apiUrl = import.meta.env.VITE_POKEAPI_URL;
 
-// Obtener lista de pokemones
-export const getPokemons = async (limit = 9) => {
+// Obtener lista de pokemones con paginación
+export const getPokemons = async (limit = 9, offset = 0) => {
   try {
-    const res = await fetch(`${apiUrl}/pokemon?limit=${limit}`);
+    const res = await fetch(
+      `${apiUrl}/pokemon?limit=${limit}&offset=${offset}`
+    );
     const data = await res.json();
 
     const details = await Promise.all(
@@ -16,18 +18,6 @@ export const getPokemons = async (limit = 9) => {
     return details;
   } catch (err) {
     console.error("Error al cargar pokemones:", err);
-    return [];
-  }
-};
-
-// Obtener tipos de Pokémon
-export const getTypes = async () => {
-  try {
-    const res = await fetch(`${apiUrl}/type`);
-    const data = await res.json();
-    return data.results;
-  } catch (err) {
-    console.error("Error al cargar tipos:", err);
     return [];
   }
 };
