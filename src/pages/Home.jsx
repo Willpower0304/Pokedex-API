@@ -12,11 +12,11 @@ export const Home = () => {
       </div>
 
       <div className=" flex flex-col items-center">
-        <div className="bg-[#fff] border-4 border-[#d1d1d1] shadow-[4px_4px_0_#000] px-6 py-4 my-8">
+        <div className="bg-[#fff] border-4 border-[#d1d1d1] shadow-[4px_4px_0_#000] px-6 py-4 my-8 w-[200px] h-[200px] flex items-center justify-center">
           <img
             src={pikachuGif}
             alt="Pikachu corriendo"
-            className="w-50 h-auto image-rendering-pixelated"
+            className="w-full h-full object-contain"
           />
         </div>
         <div className="mt-5 bg-[#ffffff] border-4 border-black shadow-[4px_4px_0_#a0a0a0] px-8 py-4 w-3/4 md:w-1/2">
