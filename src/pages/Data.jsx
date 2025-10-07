@@ -58,8 +58,6 @@ export const Data = () => {
   return (
     <div className="min-h-screen flex flex-col items-center">
       <PixelNavbar />
-
-      {/* Barra de búsqueda */}
       <div className="mt-6 sm:mt-8 flex items-center gap-3 bg-white border-4 border-black shadow-[4px_4px_0_#666666] px-3 py-2 w-[90%] sm:w-[70%] md:w-[50%]">
         <input
           type="text"
@@ -75,11 +73,8 @@ export const Data = () => {
         />
       </div>
 
-      {/* Contenido principal */}
       <div className="flex flex-col lg:flex-row w-[90%] sm:w-3/4 mt-8 sm:mt-10 gap-6 lg:gap-0">
-        {/* Columna izquierda */}
         <div className="w-full lg:w-1/2 flex flex-col items-center justify-start space-y-6">
-          {/* Nombre */}
           <div className="w-3/4 bg-white border-4 border-[#d1d1d1] shadow-[4px_4px_0_#000] py-2 h-[50px] flex items-center justify-center">
             {selected ? (
               <h2 className="text-center text-lg sm:text-xl font-bold text-gray-800 [text-shadow:2px_1px_0_#D6D6D6]">
@@ -90,7 +85,6 @@ export const Data = () => {
             )}
           </div>
 
-          {/* Imagen */}
           <div className="w-3/4 flex items-center justify-center py-6 relative">
             <div
               className="absolute inset-0 bg-center bg-no-repeat bg-contain opacity-70"
@@ -110,7 +104,6 @@ export const Data = () => {
             </div>
           </div>
 
-          {/* Botón Ver Más */}
           <button
             onClick={() => selected && navigate(`/pokemon/${selected.name}`)}
             className="w-3/4 bg-white border-4 border-[#d1d1d1] shadow-[4px_4px_0_#000] py-2 text-center text-lg sm:text-xl font-bold text-gray-800 hover:bg-gray-200 [text-shadow:2px_1px_0_#D6D6D6]"
@@ -119,7 +112,6 @@ export const Data = () => {
           </button>
         </div>
 
-        {/* Columna derecha */}
         <div className="w-full lg:w-1/3 h-[300px] sm:h-[400px] lg:h-[420px] flex flex-col bg-white border-5 border-black overflow-y-auto shadow-[4px_4px_0_#858585]">
           {pokemons.map((poke) => (
             <button
@@ -140,7 +132,6 @@ export const Data = () => {
         </div>
       </div>
 
-      {/* Controles de página */}
       <div className="flex justify-center items-center gap-4 sm:gap-6 mt-6 sm:mt-8 mb-8">
         <button
           onClick={handlePrevPage}
