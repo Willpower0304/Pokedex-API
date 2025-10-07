@@ -105,7 +105,7 @@ export const Data = () => {
           </div>
 
           <button
-            onClick={() => selected && navigate(`/pokemon/${selected.name}`)}
+            onClick={() => selected && navigate(`/pokedex/${selected.name}`)}
             className="w-3/4 bg-white border-4 border-[#d1d1d1] shadow-[4px_4px_0_#000] py-2 text-center text-lg sm:text-xl font-bold text-gray-800 hover:bg-gray-200 [text-shadow:2px_1px_0_#D6D6D6]"
           >
             Ver Más
