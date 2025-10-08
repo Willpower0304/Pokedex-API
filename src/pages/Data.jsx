@@ -88,7 +88,7 @@ export const Data = () => {
           <div className="w-3/4 flex items-center justify-center py-6 relative">
             <div
               className="absolute inset-0 bg-center bg-no-repeat bg-contain opacity-70"
-              style={{ backgroundImage: `url('src/assets/pokebola.png')` }}
+              style={{ backgroundImage: `url('/pokebola.png')` }}
             ></div>
 
             <div className="relative w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] flex items-center justify-center">
