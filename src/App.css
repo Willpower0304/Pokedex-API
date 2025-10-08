@@ -14,3 +14,9 @@ html {
   background-attachment: fixed;
   background-position: center;
 }
+
+@media (max-width: 768px) {
+  html {
+    background-attachment: scroll;
+  }
+}
