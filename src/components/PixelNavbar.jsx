@@ -41,7 +41,7 @@ export default function PixelNavbar() {
     <div className="w-full flex flex-wrap items-center justify-center bg-[#eb0000] py-2 px-2 sm:px-4 border-t-4 border-b-4 border-black shadow-[inset_0_-2px_0_#c90000] gap-2 sm:gap-3">
       <button
         onClick={handlePrev}
-        className="bg-[#c0c0c0] border-3 border-black text-black font-bold px-3 py-1 mx-1 active:translate-y-[1px] shadow-[2px_2px_0_#000] text-sm sm:text-base"
+        className="bg-[#c0c0c0] border-3 border-black text-black font-bold px-3 py-1 mx-1 active:translate-y-[1px] shadow-[3px_3px_0_#000] text-sm sm:text-base"
       >
         {"<"}
       </button>
@@ -53,7 +53,7 @@ export default function PixelNavbar() {
             onClick={() => handleTabClick(index)}
             className={`px-4 sm:px-5 py-1 text-xs sm:text-sm font-bold uppercase border-2 transition-all ${
               activeIndex === index
-                ? "bg-white text-black border-black shadow-[2px_2px_0_#000]"
+                ? "bg-white text-black border-black shadow-[5px_5px_0_#000]"
                 : "bg-[#c0c0c0] text-gray-500 border-gray-500 shadow-[2px_2px_0_#000] hover:bg-[#e0e0e0]"
             }`}
             style={{ fontFamily: "Lucida Console, monospace" }}
@@ -65,7 +65,7 @@ export default function PixelNavbar() {
 
       <button
         onClick={handleNext}
-        className="bg-[#c0c0c0] border-3 border-black text-black font-bold px-3 py-1 mx-1 active:translate-y-[1px] shadow-[2px_2px_0_#000] text-sm sm:text-base"
+        className="bg-[#c0c0c0] border-3 border-black text-black font-bold px-3 py-1 mx-1 active:translate-y-[1px] shadow-[3px_3px_0_#000] text-sm sm:text-base"
       >
         {">"}
       </button>

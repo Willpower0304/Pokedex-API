@@ -51,12 +51,23 @@ export const getPokemonByName = async (name) => {
   try {
     const res = await fetch(`${apiUrl}/pokemon/${name}`);
     const data = await res.json();
-
     const speciesRes = await fetch(`${apiUrl}/pokemon-species/${name}`);
     const speciesData = await speciesRes.json();
-
     const flavorTextEntry = speciesData.flavor_text_entries.find(
       (entry) => entry.language.name === "es"
+    );
+
+    const abilities = await Promise.all(
+      data.abilities.map(async (a) => {
+        const abilityRes = await fetch(a.ability.url);
+        const abilityData = await abilityRes.json();
+
+        const esName =
+          abilityData.names.find((n) => n.language.name === "es")?.name ||
+          a.ability.name;
+
+        return esName;
+      })
     );
 
     return {
@@ -66,7 +77,7 @@ export const getPokemonByName = async (name) => {
       height: data.height,
       weight: data.weight,
       hp: data.stats.find((s) => s.stat.name === "hp")?.base_stat || 0,
-      abilities: data.abilities.map((a) => a.ability.name),
+      abilities,
       sprite: data.sprites.front_default,
       description: flavorTextEntry
         ? flavorTextEntry.flavor_text.replace(/\n|\f/g, " ")

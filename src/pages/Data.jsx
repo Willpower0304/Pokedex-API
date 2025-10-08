@@ -53,12 +53,12 @@ export const Data = () => {
     };
 
     fetchSearch();
-  }, [searchTerm]);
+  }, [page, searchTerm]);
 
   return (
     <div className="min-h-screen flex flex-col items-center">
       <PixelNavbar />
-      <div className="mt-6 sm:mt-8 flex items-center gap-3 bg-white border-4 border-black shadow-[4px_4px_0_#666666] px-3 py-2 w-[90%] sm:w-[70%] md:w-[50%]">
+      <div className="mt-6 sm:mt-8 flex items-center gap-3 bg-white border-4 border-black shadow-[5px_5px_0_#666666] px-3 py-2 w-[90%] sm:w-[70%] md:w-[50%]">
         <input
           type="text"
           placeholder="Buscar un Pokémon..."
@@ -75,7 +75,7 @@ export const Data = () => {
 
       <div className="flex flex-col lg:flex-row w-[90%] sm:w-3/4 mt-8 sm:mt-10 gap-6 lg:gap-0">
         <div className="w-full lg:w-1/2 flex flex-col items-center justify-start space-y-6">
-          <div className="w-3/4 bg-white border-4 border-[#d1d1d1] shadow-[4px_4px_0_#000] py-2 h-[50px] flex items-center justify-center">
+          <div className="w-3/4 bg-white border-5 border-[#d1d1d1] shadow-[5px_5px_0_#858585] py-2 h-[50px] flex items-center justify-center">
             {selected ? (
               <h2 className="text-center text-lg sm:text-xl font-bold text-gray-800 [text-shadow:2px_1px_0_#D6D6D6]">
                 {selected.name.charAt(0).toUpperCase() + selected.name.slice(1)}
@@ -106,7 +106,7 @@ export const Data = () => {
 
           <button
             onClick={() => selected && navigate(`/pokedex/${selected.name}`)}
-            className="w-3/4 bg-white border-4 border-[#d1d1d1] shadow-[4px_4px_0_#000] py-2 text-center text-lg sm:text-xl font-bold text-gray-800 hover:bg-gray-200 [text-shadow:2px_1px_0_#D6D6D6]"
+            className="w-3/4 bg-white border-4 border-[#d1d1d1] shadow-[5px_5px_0_#858585] py-2 text-center text-lg sm:text-xl font-bold text-gray-800 hover:bg-gray-200 [text-shadow:2px_1px_0_#D6D6D6]"
           >
             Ver Más
           </button>
@@ -135,14 +135,14 @@ export const Data = () => {
       <div className="flex justify-center items-center gap-4 sm:gap-6 mt-6 sm:mt-8 mb-8">
         <button
           onClick={handlePrevPage}
-          className="bg-[#c0c0c0] border-4 border-black text-black font-bold px-3 sm:px-4 py-1 shadow-[2px_2px_0_#666666] active:translate-y-[1px]"
+          className="bg-[#c0c0c0] border-4 border-black text-black font-bold px-3 sm:px-4 py-1 shadow-[4px_4px_0_#666666] active:translate-y-[1px]"
         >
           {"<"}
         </button>
 
         <button
           onClick={handleNextPage}
-          className="bg-[#c0c0c0] border-4 border-black text-black font-bold px-3 sm:px-4 py-1 shadow-[2px_2px_0_#666666] active:translate-y-[1px]"
+          className="bg-[#c0c0c0] border-4 border-black text-black font-bold px-3 sm:px-4 py-1 shadow-[4px_4px_0_#666666] active:translate-y-[1px]"
         >
           {">"}
         </button>
