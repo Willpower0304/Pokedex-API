@@ -67,7 +67,7 @@ export const Data = () => {
           className="flex-1 bg-transparent outline-none text-gray-800 text-sm placeholder-gray-400"
         />
         <img
-          src="src/assets/pixel.png"
+          src="/pixel.png"
           alt="Pokebola pixel"
           className="w-8 h-8 sm:w-10 sm:h-10 cursor-pointer"
         />
