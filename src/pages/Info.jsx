@@ -139,7 +139,7 @@ export const Info = () => {
             disabled={!canSend}
             className={`${
               canSend
-                ? "bg-[#a32a34] hover:bg-[#8c242c]"
+                ? "bg-[#eb0000] hover:bg-[#8c242c]"
                 : "bg-gray-400 cursor-not-allowed"
             } text-white font-bold py-2 border-4 border-black transition-all shadow-[4px_4px_0_#858585] [text-shadow:2px_2px_0_#000000]`}
           >
