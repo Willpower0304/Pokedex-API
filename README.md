@@ -28,15 +28,17 @@ Requisitos
 
 1. Clona el repositorio:
 
+```bash
    git clone https://github.com/Willpower0304/Pokedex-API.git
-
+```
 2. Entra en el directorio del proyecto:
 
-   cd pokemonApp
-
+```bash
+cd pokemonApp
+````
 3. Instala dependencias usando pnpm:
 
-```powershell
+```bash
 pnpm install
 ```
 
