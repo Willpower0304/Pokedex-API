@@ -1,5 +1,7 @@
 # Pokedex-API (Pokemon App)
 
+<img width="1171" height="639" alt="image" src="https://github.com/user-attachments/assets/c124fd28-662b-4c02-b3af-7367b650413e" />
+
 ## Descripción
 
 Esta es una aplicación front-end construida con React y Vite que consume la PokeAPI para mostrar una lista de Pokémon, sus detalles y filtros por tipos. Está pensada como un proyecto personal y de demostración para consultar y navegar información básica de Pokémon.
